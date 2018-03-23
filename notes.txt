@@ -1,0 +1,5 @@
+Next step:
+
+https://www.npmjs.com/package/json-filter
+
+Filter by specific version support before creating the csv.

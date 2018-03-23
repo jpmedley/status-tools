@@ -14,7 +14,7 @@
     "url": "git+https://github.com/jpmedley/status-tools.git"
   },
   "author": "Joseph Medley",
-  "license": "ISC",
+  "license": "Apache 2.0",
   "bugs": {
     "url": "https://github.com/jpmedley/status-tools/issues"
   },

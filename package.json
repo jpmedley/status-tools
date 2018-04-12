@@ -4,9 +4,9 @@
   "description": "Tools for manipulating Chrome status data",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "ls features.* | xargs rm",
-    "csv": "npm run clean && npm run json && json2csv -i features.json -f category,name,comments,browsers.chrome.status.text,browsers.chrome.status.milestone_str,browsers.chrome.owners,browsers.chrome.origintrial,browsers.chrome.blink_components,browsers.chrome.flag,browsers.chrome.bug,browsers.chrome.intervention,browsers.chrome.opera,summary,id,resources -o features.csv -F -d $",
+    "csv": "npm run clean && npm run json && json2csv -i features.json -f category,name,comments,browsers.chrome.status.text,browsers.chrome.status.milestone_str,browsers.chrome.owners,browsers.chrome.origintrial,browsers.chrome.blink_components,browsers.chrome.flag,browsers.chrome.bug,browsers.chrome.intervention,browsers.chrome.opera,summary,id,resources -o features.csv -F -a -d $ -e $$",
+    "filter": "node filter.js",
     "json": "curl https://www.chromestatus.com/features.json > features.json"
   },
   "repository": {

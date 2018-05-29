@@ -60,3 +60,4 @@ typings/
 # Project-specific
 features.csv
 features.json
+filtered.csv

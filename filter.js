@@ -12,12 +12,13 @@ let version = process.argv[2];
 
 const featuresBuffer = fs.readFileSync('features.csv');
 const features = featuresBuffer.toString();
-const lines = features.split('$$');
+const lines = features.split('###');
 for (let line in lines) {
-  let cells = line.split('$');
-  console.log(line);
+  // For some odd reason, line turns out to be the index in lines as a string.
+  let cellsStr = lines[parseInt(line)];
+  let cells = cellsStr.split('%');
   if (cells[4] == version) {
-    fs.appendFile('filtered.csv', line, (err) => {
+    fs.appendFile('filtered.csv', cellsStr, (err) => {
       if (err) throw err;
     })
   }

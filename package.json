@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "clean": "ls features.* | xargs rm",
-    "csv": "npm run clean && npm run json && json2csv -i features.json -f category,name,comments,browsers.chrome.status.text,browsers.chrome.status.milestone_str,browsers.chrome.owners,browsers.chrome.origintrial,browsers.chrome.blink_components,browsers.chrome.flag,browsers.chrome.bug,browsers.chrome.intervention,browsers.chrome.opera,summary,id,resources -o features.csv -F -a -d $ -e $$",
+    "csv": "npm run clean && npm run json && json2csv -i features.json -f category,name,comments,browsers.chrome.status.text,browsers.chrome.status.milestone_str,browsers.chrome.owners,browsers.chrome.origintrial,browsers.chrome.blink_components,browsers.chrome.flag,browsers.chrome.bug,browsers.chrome.intervention,browsers.chrome.opera,summary,id,resources -o features.csv -F -a -d '%' -e '###'",
     "filter": "node filter.js",
     "json": "curl https://www.chromestatus.com/features.json > features.json"
   },
